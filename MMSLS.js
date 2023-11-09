@@ -18,19 +18,32 @@ const MMSLS = [
 =====================请在下面编辑=====================
 =====================请在下面编辑=====================
  */
-const MMSLS = [
-    "https://www.maimemo.com/share/page?uid=29726779&pid=077b5b8c4bb42da20e5079b240f2ec7a&tid=39d12fbfbd0b6408f8826e46ecb12daf",
-  ]
-  /**
-   * 生成随机数字
-   * @param {number} min 最小值（包含）
-   * @param {number} max 最大值（不包含）
-   */
-  function randomNumber(min = 0, max = 100) {
-    return Math.min(Math.floor(min + Math.random() * (max - min)), max);
-  }
-  const MMSL_random = MMSLS[randomNumber(0, MMSLS.length)];
-  
-  module.exports = {
-    MMSL_random
-  }
+	// const MMSLS = [
+	// 	"https://www.maimemo.com/share/page?uid=29726779&pid=077b5b8c4bb42da20e5079b240f2ec7a&tid=39d12fbfbd0b6408f8826e46ecb12daf",
+	// 	"https://www.maimemo.com/share/page?uid=29726779&pid=077b5b8c4bb42da20e5079b240f2ec7a&tid=39d12fbfbd0b6408f8826e46ecb12daf",
+	// ];
+
+let MMSLS = [];
+
+const axios = require("axios");
+axios.get("http://121.89.241.18:7878/list.php").then(function (response) {
+	// console.log(response.data);
+	MMSLS = response.data;
+}).catch(function (error) {
+	console.error(error);
+});
+
+/**
+ * 生成随机数字
+ * @param {number} min 最小值（包含）
+ * @param {number} max 最大值（不包含）
+ */
+function randomNumber (min = 0, max = 100) {
+	return Math.min(Math.floor(min + Math.random() * (max - min)), max);
+}
+
+const MMSL_random = MMSLS[randomNumber(0, MMSLS.length)];
+
+module.exports = {
+	MMSL_random,
+};

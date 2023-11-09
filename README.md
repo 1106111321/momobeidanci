@@ -39,3 +39,25 @@
 |  `TG_PROXY_PORT`  |                     Telegram 代理的端口                      | 非必须 | 例子：http代理 http://127.0.0.1:1080 则填写 1080             |
 
 
+https://www.cnblogs.com/ministep/p/16674049.html
+
+感谢楼主，可用![img](部署方法.assets/42.gif)，说下使用方法，给和我一样不懂代码的人看
+1 注册并登录github
+2 点击右上角加号然后点import repository，https://github.com/new/import，在Your old repository's clone URL处粘贴楼主给的gitee链接：https://gitee.com/miranda0111/momoshare.git，在Repository name
+处随便填个名字，再点绿色的按钮保存
+3 点settings，再点action，最上面Actions permissions这项点击第一个然后按下面的save应该就行，不行再调下别的
+
+4 点code，点MMSLS.js，把你的分享链接放进去，三个冒号之间都填一个或者删掉两个冒号只留一个空填链接应该都行
+5 点action，点左面的 click分享link，点右边的 run workflow 就会运行了，差不多30多分钟左右一次，每天应该都需要换分享链接，重复5和6就行了
+https://github.com/1106111321/momobeidanci/settings/actions
+
+![img](run workflow.png)
+查看日志：
+https://github.com/1106111321/momobeidanci/actions/runs/6783760911/job/18438673126
+
+更新之后：
+https://github.com/1106111321/momobeidanci/actions/workflows/random.yml
+
+
+
+
