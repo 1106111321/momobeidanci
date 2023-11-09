@@ -18,20 +18,10 @@ const MMSLS = [
 =====================请在下面编辑=====================
 =====================请在下面编辑=====================
  */
-// const MMSLS = [
-// 	"https://www.maimemo.com/share/page?uid=29726779&pid=077b5b8c4bb42da20e5079b240f2ec7a&tid=39d12fbfbd0b6408f8826e46ecb12daf",
-// 	"https://www.maimemo.com/share/page?uid=29726779&pid=077b5b8c4bb42da20e5079b240f2ec7a&tid=39d12fbfbd0b6408f8826e46ecb12daf",
-// ];
-
-let MMSLS = [];
-
-const axios = require("axios");
-axios.get("http://121.89.241.18:7878/list.php").then(function (response) {
-	// console.log(response.data);
-	MMSLS = response.data;
-}).catch(function (error) {
-	console.error(error);
-});
+let MMSLS = [
+	"https://www.maimemo.com/share/page?uid=29726779&pid=03ced6cd51d35865b7baa58d3df5c809&tid=50f0fa575bd5b1bd8d1a7ac1a014cb27",
+	"https://www.maimemo.com/share/page?uid=29726779&pid=3245e1c29b743671d4260121fe3c5650&tid=b8489b0ab4e8f4de4c16f31af7598eb0",
+];
 
 /**
  * 生成随机数字
@@ -41,6 +31,50 @@ axios.get("http://121.89.241.18:7878/list.php").then(function (response) {
 function randomNumber (min = 0, max = 100) {
 	return Math.min(Math.floor(min + Math.random() * (max - min)), max);
 }
+
+// ************ jQuery 同步发布出去 ************ //
+/*
+// https://www.codenong.com/37239690/
+// "jquery": "^1.8.0",
+// "jsdom": "^10.1.0",
+const jsdom      = require("jsdom");
+const { JSDOM }  = jsdom;
+const { window } = new JSDOM(`<!DOCTYPE html>`);
+const $          = require("jQuery")(window);
+
+// $.post("http://121.89.241.18:7878/list.php", {}, function (data) {
+// 	let min = 0;
+// 	let max = data.length;
+// 	url     = data[Math.min(Math.floor(min + Math.random() * (max - min)), max)];
+// 	console.log("url",url);
+//
+// }, "json");
+
+let result = [];
+$.ajax({
+	async    : false,
+	type     : "POST",
+	url      : "http://121.89.241.18:7878/list.php",
+	data     : { id : 123 },
+	dataType : "json",
+	timeout  : 30000,
+	success  : function (data) {
+		console.log("success data", "");
+		result = data;
+	},
+	error    : function (data) {
+		console.log("error data", data);
+		result = data;
+	},
+	complete : function (data) {
+		console.log("complete data", "");
+		result = data;
+	},
+});
+
+console.log("result",result);
+*/
+// ************ jQuery 同步发布出去 ************ //
 
 const MMSL_random = MMSLS[randomNumber(0, MMSLS.length)];
 
