@@ -19,8 +19,8 @@ const MMSLS = [
 =====================请在下面编辑=====================
  */
 let MMSLS = [
-	"https://www.maimemo.com/share/page?uid=29726779&pid=d418a877ff5336382dd7925155dc1555&tid=c2b5a4d4a82d3f2daa1d78427fac52a0",
-	"https://www.maimemo.com/share/page?uid=32329480&pid=d418a877ff5336382dd7925155dc1555&tid=7d7e97052d0ead3d2ca7f93c28bd7f0a",
+	"https://www.maimemo.com/share/page?uid=32329480&pid=4ddc9601f97ade55d199f454c522b81b&tid=054bd9d295baae4fcad9c88359809763",
+	"https://www.maimemo.com/share/page?uid=29726779&pid=4ddc9601f97ade55d199f454c522b81b&tid=fdfe617b11eff6e5ea8e5b4facaef2ab",
 ];
 
 /**
