@@ -10,7 +10,7 @@ git pull
 echo "2、推送gitHub..."
 for((i=1;i<=10;i++));do
   echo "loop："$i
-  echo -e "访问时间是：`date '+%Y%m%d %H:%M:%S'`"
+  echo -e "访问时间是：`date '+%Y-%m-%d %H:%M:%S'`"
   git push gitHub_origin "master"
 done
 
