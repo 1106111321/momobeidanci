@@ -9,10 +9,10 @@ set /a i=0
   set /a i+=1
 
   rem git add *
-  git commit -m "%date% %time%: Updated By test"
-  git push
+  rem git commit -m "%date% %time%: Updated By test"
+  git push gitee_origin "master"
   rem exit
 
-  if %i% leq 100 goto LoopStart
+  if %i% leq 1 goto LoopStart
 
 
