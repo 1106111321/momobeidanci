@@ -9,6 +9,7 @@ git pull
 
 echo "2、推送gitHub..."
 for((i=1;i<=10;i++));do
+  echo "loop："$i
   git push gitHub_origin "master"
 done
 
