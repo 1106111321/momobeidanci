@@ -9,7 +9,7 @@ git pull
 
 echo "2、推送gitHub..."
 for((i=1;i<=10;i++));do
-  git push gitHub_origin
+  git push gitHub_origin "master"
 done
 
 echo "3、部署完成"
